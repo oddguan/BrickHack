@@ -1,0 +1,28 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+    <div class="container">
+        <main>
+            <form class="mb-2" action="/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control <%= emailError %>" type="text" name="email" id="email" placeholder="Enter Email" required>
+                    <small class="invalid-feedback">
+                        Please enter a valid email address
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input class="form-control <%= passwordError %>" type="password" name="password" id="password" placeholder="Enter Password" required>
+                    <small class="invalid-feedback">Please enter a valid password</small>
+                </div>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button class="btn btn-outline-primary btn-block" type="submit"><span class="h5">Sign In</span></button>
+            </form>
+            <a href="/signup" class="btn btn-outline-primary btn-block"><span class="h5">Sign Up as New User</span></a>
+            <a href="/reset" class="btn btn-outline-primary btn-block"><span class="h5">Reset Password</span></a>
+        </main>
+    </div>
+<%- include('../includes/end.ejs') %>

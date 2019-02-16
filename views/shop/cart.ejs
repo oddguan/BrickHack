@@ -1,0 +1,43 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <div class="container">
+            <main>
+                <% if (products.length > 0) { %>
+                    <ul class="list-group list-group-flush">
+                        <% products.forEach(p => { %>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h5><%= p.productId.title %></h1>
+                                    </div>
+                                    <div>
+                                        <h5><span class="align-middle">Quantity: <%= p.quantity %></span></h2>
+                                    </div>
+                                    <div>
+                                        <form action="/cart-delete-item" method="POST">
+                                            <input type="hidden" value="<%= p.productId._id %>" name="productId">
+                                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                            <button class="btn btn-danger btn-sm" type="submit"><span class="align-middle">Delete</span></button> 
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        <% }) %>
+                    </ul>
+                    <hr>
+                    <div class="text-center">
+                        <form action="/create-order" method="POST">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <button type="submit" class="btn btn-success">Order Now!</button>
+                        </form>
+                    </div>
+                    
+                <% } else { %>
+                    <h1>No Products in Cart!</h1>
+                <% } %>
+            </main>
+        </div>
+        <%- include('../includes/end.ejs') %>
