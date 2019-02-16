@@ -211,7 +211,7 @@ exports.postReset = (req, res, next) => {
 };
 
 exports.getNewPassword = (req, res, next) => {
-  const token = req.params.token;
+  const { token } = req.params;
   User.findOne({ resetToken: token, resetTokenExpiration: { $gt: Date.now() } })
     .then((user) => {
       let passwordError = req.flash('passwordError');
@@ -233,8 +233,7 @@ exports.getNewPassword = (req, res, next) => {
 
 exports.postNewPassword = (req, res, next) => {
   const newPassword = req.body.passWord;
-  const userId = req.body.userId;
-  const passwordToken = req.body.passwordToken;
+  const { userId, passwordToken } = req.body;
   let resetUser;
 
   User.findOne({
