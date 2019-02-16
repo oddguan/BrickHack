@@ -46,6 +46,7 @@ exports.getSignup = (req, res, next) => {
 };
 
 exports.getReset = (req, res, next) => {
+  console.log('get reset');
   let emailError = req.flash('emailError');
   if (!emailError.length > 0) {
     emailError = null;
@@ -85,25 +86,47 @@ exports.postLogin = (req, res, next) => {
       passwordError,
     });
   }
-  User.findOne({ email }).then((userDoc) => {
-    bcrypt
-      .compare(password, userDoc.password)
-      .then((doMatch) => {
-        if (doMatch) {
-          req.session.isLoggedIn = true;
-          req.session.user = userDoc;
-          return req.session.save((err) => {
-            console.log(err);
-            res.redirect('/');
-          }); // want to be sure the session is created before continue
-        }
-        res.redirect('/login');
-      })
-      .catch((err) => {
-        console.log(err);
-        res.redirect('/login');
-      });
-  });
+  User.findOne({ email })
+    .then((userDoc) => {
+      if (!userDoc) {
+        return res.status(422).render('auth/login', {
+          path: '/login',
+          pageTitle: 'Login',
+          emailValid: 'is-invalid',
+          emailError,
+          passwordValid,
+          passwordError,
+        });
+      }
+      bcrypt
+        .compare(password, userDoc.password)
+        .then((doMatch) => {
+          if (doMatch) {
+            req.session.isLoggedIn = true;
+            req.session.user = userDoc;
+            return req.session.save((err) => {
+              console.log(err);
+              res.redirect('/');
+            }); // want to be sure the session is created before continue
+          }
+          // res.redirect('/login');
+          res.render('auth/login', {
+            path: '/login',
+            pageTitle: 'Login',
+            emailValid,
+            emailError,
+            passwordValid: 'is-invalid',
+            passwordError: 'Input password is incorrect',
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+          res.redirect('/login');
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 exports.postLogout = (req, res, next) => {
@@ -211,6 +234,7 @@ exports.postReset = (req, res, next) => {
 };
 
 exports.getNewPassword = (req, res, next) => {
+  console.log('get new password');
   const { token } = req.params;
   User.findOne({ resetToken: token, resetTokenExpiration: { $gt: Date.now() } })
     .then((user) => {
@@ -219,7 +243,7 @@ exports.getNewPassword = (req, res, next) => {
         passwordError = null;
       }
       res.render('auth/new-password', {
-        path: 'new-password',
+        path: '/new-password',
         pageTitle: 'New Password',
         passwordError,
         userId: user._id.toString(),
@@ -232,7 +256,7 @@ exports.getNewPassword = (req, res, next) => {
 };
 
 exports.postNewPassword = (req, res, next) => {
-  const newPassword = req.body.passWord;
+  const newPassword = req.body.password;
   const { userId, passwordToken } = req.body;
   let resetUser;
 
@@ -258,4 +282,3 @@ exports.postNewPassword = (req, res, next) => {
       console.log(err);
     });
 };
-
