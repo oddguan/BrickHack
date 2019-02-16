@@ -1,50 +1,48 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   email: {
     type: String,
-    required: true
+    required: true,
   },
   password: {
     type: String,
-    required: true
+    required: true,
   },
   items: {
     borrow: [
       {
         productId: {
           type: Schema.Types.ObjectId,
-          ref: "Product",
-          required: true
-        }
-      }
+          ref: 'Product',
+          required: true,
+        },
+      },
     ],
     lend: [
       {
         productId: {
           type: Schema.Types.ObjectId,
-          ref: "Product",
-          required: true
-        }
-      }
-    ]
+          ref: 'Product',
+          required: true,
+        },
+      },
+    ],
   },
   homecoords: {
     lat: {
       type: Number,
-      required: true
     },
     lng: {
       type: Number,
-      required: true
-    }
-  }
+    },
+  },
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model('User', userSchema);
