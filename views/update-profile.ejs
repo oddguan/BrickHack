@@ -1,0 +1,18 @@
+<%- include('./includes/head.ejs') %>
+</head>
+
+<body>
+   <%- include('./includes/navigation.ejs') %>
+   <div class="container">
+        <form action="/update-profile" method="POST">
+            <input type="text" name="street1">
+            <input type="text" name="street2">
+            <input type="text" name="city">
+            <input type="text" name="state">
+            <input type="text" name="zip">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit">submit</button>
+        </form>
+   </div>
+
+<%- include('./includes/end.ejs') %>
