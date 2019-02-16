@@ -10,7 +10,7 @@ const User = require('../models/user');
 const transporter = nodeMailer.createTransport(
   sendGridTransport({
     auth: {
-      api_key: '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',
+      api_key: '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',
     },
   }),
 );
@@ -258,3 +258,4 @@ exports.postNewPassword = (req, res, next) => {
       console.log(err);
     });
 };
+

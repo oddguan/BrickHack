@@ -9,6 +9,7 @@ const csrf = require('csurf');
 const flash = require('connect-flash');
 
 const authRoutes = require('./routes/auth');
+const profileRoutes = require('./routes/profile');
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
@@ -57,6 +58,7 @@ app.use((req, res, next) => {
 });
 
 app.use(authRoutes);
+app.use(profileRoutes);
 
 app.use(errorController.get404);
 
