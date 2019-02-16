@@ -35,6 +35,15 @@ const userSchema = new Schema({
       },
     ],
   },
+  posts: [
+    {
+      postId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Post',
+        required: true,
+      },
+    },
+  ],
   address: {
     street1: {
       type: String,
