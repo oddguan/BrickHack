@@ -1,0 +1,354 @@
+
+@font-face {
+                          font-family: "Zapfino";
+                          src: url('../fonts/Zapfino.ttf') format("truetype");
+                        }
+                        
+.login {
+  width               : 100%;
+  min-width           : 1440px;
+  height              : 100vh;
+  min-height          : 1024px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.login .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : -29px;
+  height              : 1234px;
+  width               : 1974px;
+  position            : absolute;
+  margin              : 0;
+  left                : -146px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 216px;
+  height              : 409px;
+  box-sizing          : border-box;
+  width               : 724px;
+  position            : absolute;
+  margin              : 0;
+  left                : 358px;
+  border-radius       : 22px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .login1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 473px;
+  height              : 63px;
+  width               : 409px;
+  position            : absolute;
+  margin              : 0;
+  left                : 516px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .login1 .loginbutton {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 63px;
+  width               : 409px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .login1 .login2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 16px;
+  height              : auto;
+  width               : 148px;
+  position            : absolute;
+  margin              : 0;
+  left                : 128px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Medium", Helvetica, Arial, serif;
+  font-size           : 30.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 41.0px;
+}
+.login .registernewaccount {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 255px;
+  height              : auto;
+  width               : 464px;
+  position            : absolute;
+  margin              : 0;
+  left                : 488px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Bold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 33.0px;
+}
+.login .email {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 304px;
+  height              : 55px;
+  width               : 401px;
+  position            : absolute;
+  margin              : 0;
+  left                : 521px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .email .account {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 55px;
+  box-sizing          : border-box;
+  width               : 401px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .email .email1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 20px;
+  height              : auto;
+  width               : 357px;
+  position            : absolute;
+  margin              : 0;
+  left                : 17px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 33.0px;
+}
+.login .password {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 388px;
+  height              : 55px;
+  width               : 401px;
+  position            : absolute;
+  margin              : 0;
+  left                : 519px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .password .password2 {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 55px;
+  box-sizing          : border-box;
+  width               : 401px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .password .password1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 20px;
+  height              : auto;
+  width               : 357px;
+  position            : absolute;
+  margin              : 0;
+  left                : 22px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 33.0px;
+}
+.login .favor {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 32px;
+  height              : auto;
+  width               : 401px;
+  position            : absolute;
+  margin              : 0;
+  left                : 519px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Zapfino", Helvetica, Arial, serif;
+  font-size           : 64.0px;
+  color               : rgba(68, 237, 255, 1.0);
+  text-align          : left;
+  line-height         : 216.0px;
+}
+.login .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 546px;
+  height              : 41px;
+  width               : 357px;
+  position            : absolute;
+  margin              : 0;
+  left                : 542px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.login .group .register {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : 105px;
+  position            : absolute;
+  margin              : 0;
+  left                : 251px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 30.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 41.0px;
+}
+.login .group .needanaccount {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : 251px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 30.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 41.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}

@@ -1,0 +1,422 @@
+
+@font-face {
+                          font-family: "Zapfino";
+                          src: url('../fonts/Zapfino.ttf') format("truetype");
+                        }
+                        
+.services {
+  width               : 100%;
+  min-width           : 1440px;
+  height              : 100vh;
+  min-height          : 1024px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.services .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 108px;
+  height              : 177px;
+  width               : 1352px;
+  position            : absolute;
+  margin              : 0;
+  left                : 52px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .group .rectangle3 {
+  background-color    : rgba(249, 237, 231, 1.0);
+  top                 : 0px;
+  height              : 177px;
+  box-sizing          : border-box;
+  width               : 1352px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .group .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 23px;
+  height              : 132px;
+  width               : 347px;
+  position            : absolute;
+  margin              : 0;
+  left                : 45px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .a25 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 130px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 1256px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 36.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 49.0px;
+}
+.services .shovelsnow {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 129px;
+  height              : auto;
+  width               : 384px;
+  position            : absolute;
+  margin              : 0;
+  left                : 506px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 27.0px;
+}
+.services .icanhelp {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 234px;
+  height              : auto;
+  width               : 384px;
+  position            : absolute;
+  margin              : 0;
+  left                : 398px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.services .datetime {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 237px;
+  height              : auto;
+  width               : 227px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1177px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 19.0px;
+}
+.services .rectangle5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 223px;
+  height              : 49px;
+  box-sizing          : border-box;
+  width               : 168px;
+  position            : absolute;
+  margin              : 0;
+  left                : 506px;
+  border-radius       : 24px;
+  border-style        : solid;
+  border-width        : 2px;
+  border-color        : rgba(255, 162, 93, 0.39);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .services1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : auto;
+  width               : 118px;
+  position            : absolute;
+  margin              : 0;
+  left                : 869px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.services .requestnewservice {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 305px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 648px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 27.0px;
+}
+.services .navigationbar {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 96px;
+  width               : 1440px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .navigationbar .rectangle {
+  background-color    : rgba(255, 162, 93, 1.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 1440px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .navigationbar .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : 89px;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1316px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .navigationbar .requests {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 170px;
+  position            : absolute;
+  margin              : 0;
+  left                : 951px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.services .navigationbar .community {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 170px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1069px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.services .navigationbar .history {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 118px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1202px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.services .navigationbar .services2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 118px;
+  position            : absolute;
+  margin              : 0;
+  left                : 869px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.services .navigationbar .searchbar {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 35px;
+  width               : 535px;
+  position            : absolute;
+  margin              : 0;
+  left                : 77px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .navigationbar .searchbar .rectangle2 {
+  background-color    : rgba(234, 231, 231, 1.0);
+  top                 : 0px;
+  height              : 35px;
+  box-sizing          : border-box;
+  width               : 535px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 17px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.services .navigationbar .searchbar .skewdrivers {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 4px;
+  height              : auto;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 18px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : left;
+  line-height         : 27.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}

@@ -1,0 +1,909 @@
+
+@font-face {
+                          font-family: "Zapfino";
+                          src: url('../fonts/Zapfino.ttf') format("truetype");
+                        }
+                        
+.history {
+  width               : 100%;
+  min-width           : 1440px;
+  height              : 100vh;
+  min-height          : 1024px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.history .rectangle6 {
+  background-color    : rgba(255, 147, 68, 0.52);
+  top                 : 127px;
+  height              : 954px;
+  box-sizing          : border-box;
+  width               : 1147px;
+  position            : absolute;
+  margin              : 0;
+  left                : 147px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .navigationbar {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 96px;
+  width               : 1440px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .navigationbar .rectangle {
+  background-color    : rgba(255, 162, 93, 1.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 1440px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .navigationbar .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : 89px;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1316px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .navigationbar .requests {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 170px;
+  position            : absolute;
+  margin              : 0;
+  left                : 951px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.history .navigationbar .community {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 170px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1069px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.history .navigationbar .history1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 118px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1202px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.history .navigationbar .services {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : auto;
+  width               : 118px;
+  position            : absolute;
+  margin              : 0;
+  left                : 869px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.history .navigationbar .searchbar {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 35px;
+  width               : 535px;
+  position            : absolute;
+  margin              : 0;
+  left                : 77px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .navigationbar .searchbar .rectangle2 {
+  background-color    : rgba(234, 231, 231, 1.0);
+  top                 : 0px;
+  height              : 35px;
+  box-sizing          : border-box;
+  width               : 535px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 17px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .navigationbar .searchbar .skewdrivers {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 4px;
+  height              : auto;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 18px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(74, 73, 74, 1.0);
+  text-align          : left;
+  line-height         : 27.0px;
+}
+.history .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 224px;
+  height              : 170px;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 768px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group .rectangle3 {
+  background-color    : rgba(249, 237, 231, 1.0);
+  top                 : 0px;
+  height              : 101px;
+  box-sizing          : border-box;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group .forkillingpeople {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : auto;
+  width               : 272px;
+  position            : absolute;
+  margin              : 0;
+  left                : 66px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 19.0px;
+}
+.history .group .cost1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 41px;
+  height              : auto;
+  width               : 126px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group .screwdrivergoodc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : auto;
+  width               : 329px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 82px;
+  box-sizing          : border-box;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  object-fit          : cover;
+}
+.history .group1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 332px;
+  height              : 170px;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 768px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group1 .rectangle3 {
+  background-color    : rgba(249, 237, 231, 1.0);
+  top                 : 0px;
+  height              : 101px;
+  box-sizing          : border-box;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group1 .forkillingpeople {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : auto;
+  width               : 272px;
+  position            : absolute;
+  margin              : 0;
+  left                : 66px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 19.0px;
+}
+.history .group1 .cost1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 41px;
+  height              : auto;
+  width               : 126px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group1 .screwdrivergoodc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : auto;
+  width               : 329px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group1 .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 82px;
+  box-sizing          : border-box;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  object-fit          : cover;
+}
+.history .group2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 441px;
+  height              : 170px;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 768px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group2 .rectangle3 {
+  background-color    : rgba(249, 237, 231, 1.0);
+  top                 : 0px;
+  height              : 101px;
+  box-sizing          : border-box;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group2 .forkillingpeople {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : auto;
+  width               : 272px;
+  position            : absolute;
+  margin              : 0;
+  left                : 66px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 19.0px;
+}
+.history .group2 .cost1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 41px;
+  height              : auto;
+  width               : 126px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group2 .screwdrivergoodc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : auto;
+  width               : 329px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group2 .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 82px;
+  box-sizing          : border-box;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  object-fit          : cover;
+}
+.history .lent {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 171px;
+  height              : auto;
+  width               : 255px;
+  position            : absolute;
+  margin              : 0;
+  left                : 863px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-DemiBold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 24.0px;
+}
+.history .lent .span1 {
+  line-height         : 33.0px;
+}
+.history .lent .span2 {
+  font-size           : 30.0px;
+  line-height         : 41.0px;
+}
+.history .group3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 224px;
+  height              : 170px;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 224px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group3 .rectangle3 {
+  background-color    : rgba(249, 237, 231, 1.0);
+  top                 : 0px;
+  height              : 101px;
+  box-sizing          : border-box;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group3 .forkillingpeople {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : auto;
+  width               : 272px;
+  position            : absolute;
+  margin              : 0;
+  left                : 66px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 19.0px;
+}
+.history .group3 .cost1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 41px;
+  height              : auto;
+  width               : 126px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group3 .screwdrivergoodc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : auto;
+  width               : 329px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group3 .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 82px;
+  box-sizing          : border-box;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  object-fit          : cover;
+}
+.history .group4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 332px;
+  height              : 170px;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 224px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group4 .rectangle3 {
+  background-color    : rgba(249, 237, 231, 1.0);
+  top                 : 0px;
+  height              : 101px;
+  box-sizing          : border-box;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group4 .forkillingpeople {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : auto;
+  width               : 272px;
+  position            : absolute;
+  margin              : 0;
+  left                : 66px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 19.0px;
+}
+.history .group4 .cost1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 41px;
+  height              : auto;
+  width               : 126px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group4 .screwdrivergoodc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : auto;
+  width               : 329px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group4 .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 82px;
+  box-sizing          : border-box;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  object-fit          : cover;
+}
+.history .group5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 441px;
+  height              : 170px;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 224px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group5 .rectangle3 {
+  background-color    : rgba(249, 237, 231, 1.0);
+  top                 : 0px;
+  height              : 101px;
+  box-sizing          : border-box;
+  width               : 476px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.history .group5 .forkillingpeople {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : auto;
+  width               : 272px;
+  position            : absolute;
+  margin              : 0;
+  left                : 66px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-UltraLight", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 19.0px;
+}
+.history .group5 .cost1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 41px;
+  height              : auto;
+  width               : 126px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group5 .screwdrivergoodc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : auto;
+  width               : 329px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-Regular", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 25.0px;
+}
+.history .group5 .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 82px;
+  box-sizing          : border-box;
+  width               : 93px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  border-radius       : 10px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(150, 150, 150, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  object-fit          : cover;
+}
+.history .borrowed {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 171px;
+  height              : auto;
+  width               : 255px;
+  position            : absolute;
+  margin              : 0;
+  left                : 319px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AvenirNext-DemiBold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 24.0px;
+}
+.history .borrowed .span1 {
+  line-height         : 33.0px;
+}
+.history .borrowed .span2 {
+  font-size           : 30.0px;
+  line-height         : 41.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
