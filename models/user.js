@@ -69,6 +69,12 @@ const userSchema = new Schema({
   },
   resetToken: String,
   resetTokenExpiration: Date,
+  friends: [
+    {
+      userId: Schema.Types.ObjectId,
+    },
+  ],
+  icon: String,
 });
 
 module.exports = mongoose.model('User', userSchema);

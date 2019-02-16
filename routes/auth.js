@@ -17,19 +17,15 @@ router.get('/reset/:token', authController.getNewPassword);
 router.post(
   '/login',
   [
-    // check('email')
-    //   .isEmail()
-    //   .withMessage('This is not a valid email address.')
-    //   .custom((value, { req }) => {
-    //     User.findOne({ email: value })
-    //       .then((userDoc) => {
-    //         console.log(userDoc);
-    //         if (!userDoc) {
-    //           return Promise.reject(new Error('Account does not exist!'));
-    //         }
-    //       })
-    //       .catch();
-    //   }),
+    check('email')
+      .isEmail()
+      .withMessage('This is not a valid email address.')
+      .custom((value, { req }) => User.findOne({ email: value }).then((userDoc) => {
+        console.log(userDoc);
+        if (!userDoc) {
+          return Promise.reject(new Error('Account does not exist!'));
+        }
+      })),
     body(
       'password',
       'Please enter a password with only numbers and text and at least 5 characters.',

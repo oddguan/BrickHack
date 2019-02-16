@@ -29,6 +29,8 @@ exports.getLogin = (req, res, next) => {
     pageTitle: 'Login',
     emailError,
     passwordError,
+    emailValid: null,
+    passwordValid: null,
   });
 };
 
@@ -65,7 +67,7 @@ exports.postLogin = (req, res, next) => {
   let passwordError;
   const { email, password } = req.body;
   const errors = validationResult(req).array();
-  console.log(errors);
+  // console.log('postlogin errors: ', errors);
   if (errors.length !== 0) {
     errors.forEach((e) => {
       if (e.param === 'email') {
@@ -77,6 +79,8 @@ exports.postLogin = (req, res, next) => {
         passwordValid = 'is-invalid';
       }
     });
+    console.log(emailError);
+    console.log(emailValid);
     return res.status(422).render('auth/login', {
       path: '/login',
       pageTitle: 'Login',
