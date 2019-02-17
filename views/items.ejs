@@ -1,0 +1,29 @@
+<%- include('./includes/head.ejs') %>
+</head>
+
+<body>
+   <%- include('./includes/navigation.ejs') %>
+    <div class="container">
+        <main>
+            <div class="container row d-flex justify-content-around">
+                <% for (i of lendingItems) { %>
+                    <div class="card m-3 text-center" style="flex-basis: 18rem;">
+                        <div>
+                            <img class="card-img-top p-2" src="<%= i.imageURL %>" alt="<%= i.name %>">
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title"><%= i.name %></h1>
+                            <!-- <div class="card-text">
+                                <h2>$<%=  %></h2>
+                                <p><%=  %></p>
+                            </div> -->
+                            <!-- <a href="/products/<%=  %>" class="btn btn-outline-primary mb-3">Details</a>
+                            <% if (isAuthenticated) { %>
+                            <% } %>     -->
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </main>
+    </div>
+<%- include('./includes/end.ejs') %>

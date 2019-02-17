@@ -11,4 +11,8 @@ router.get('/update-profile', profileController.getUpdateProfile);
 
 router.post('/update-profile', profileController.postUpdateProfile);
 
+router.get('/add-item', profileController.getAddItem);
+
+router.post('/add-item', profileController.postAddItem);
+
 module.exports = router;

@@ -2,6 +2,7 @@ const axios = require('axios');
 
 const User = require('../models/user');
 const Block = require('../models/block');
+const Product = require('../models/product');
 
 const GEOCODE_API_KEY = 'AIzaSyDcxpWg6vSSKguDxWsJ_GIVT7QuRPYwUdw';
 
@@ -155,6 +156,40 @@ exports.postUpdateProfile = (req, res, next) => {
             .catch((err) => {
               console.log(err);
             });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+exports.getAddItem = (req, res, next) => {
+  res.render('add-item', {
+    path: '/add-item',
+    pageTitle: 'Add Item',
+  });
+};
+
+exports.postAddItem = (req, res, next) => {
+  const { name, img } = req.body;
+  console.log(req.user.items.lend);
+  const newProduct = new Product({
+    name,
+    imageUrl: img,
+    userId: req.user,
+  });
+  newProduct
+    .save()
+    .then(() => {
+      req.user.items.lend.push(newProduct);
+      return req.user
+        .save()
+        .then((result) => {
+          // console.log(result);
+          res.redirect('/add-item');
         })
         .catch((err) => {
           console.log(err);

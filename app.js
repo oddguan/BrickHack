@@ -10,6 +10,7 @@ const flash = require('connect-flash');
 
 const authRoutes = require('./routes/auth');
 const profileRoutes = require('./routes/profile');
+const productRoutes = require('./routes/product');
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
@@ -59,6 +60,7 @@ app.use((req, res, next) => {
 
 app.use(authRoutes);
 app.use(profileRoutes);
+app.use(productRoutes);
 
 app.use(errorController.get404);
 
