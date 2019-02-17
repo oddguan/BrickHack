@@ -1,16 +1,48 @@
+const async = require('async');
+
 const Block = require('../models/block');
 const User = require('../models/user');
 const Product = require('../models/product');
 
 exports.getProduct = async (req, res, next) => {
   console.log('get product');
-  const lendingItems = [];
   const result = [];
+  // const lendingItems = [];
+  // Block.findById(req.user.blockId).then((block) => {
+  //   console.log(block);
+  //   block.users.forEach((u) => {
+  //     u.items.lend.forEach((i) => {
+  //       lendingItems.push(i);
+  //     });
+  //   });
+  // });
+  // console.log(lendingItems);
   Block.findById(req.user.blockId)
-    .populate('users.userId')
+    .populate({
+      path: 'users',
+      populate: {
+        path: 'items.lend',
+        model: 'Product',
+      },
+      model: 'User',
+    })
     .exec((err, block) => {
-      console.log(block);
+      // console.log(block);
+      // console.log(block.users[0]);
+      block.users.forEach((u) => {
+        console.log(u);
+        async.forEachOf(u, (value, key, callback) => {
+          result.push(u);
+        });
+        // result = result.concat(u.items.lend);
+      });
     });
+  console.log(result);
+  // console.log(block.users[0].items);
+  // Promise.all(block.users.map(u => lendingItems.concat(u.items.items.lend))).then((b) => {
+  //   console.log(b);
+  // });
+  // });
   //   .then((b) => {
   //     console.log('block', b);
   //     block = b;
