@@ -67,13 +67,13 @@
                     <%= user.name %>
                 </div>
                 <div class="a84winbourneroadr">
-                    84 Winbourne Road, Rochester NY
+                    <%= `${user.address.street1}, ${user.address.street2}, ${user.address.city}, ${user.address.state}, ${user.address.zip}` %>
                 </div>
-                <img anima-src="./img/profile-oval-2@2x.png" class="oval2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                <img anima-src="<%= user.icon ? user.icon : './img/default-avatar.jpg' %>" class="oval2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <div class="group3">
                     <div class="rectangle3">
                     </div>
-                    <div class="content">
+                    <div class="content"> 
                         Content
                     </div>
                     <div class="datetime">

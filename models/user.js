@@ -71,10 +71,17 @@ const userSchema = new Schema({
   resetTokenExpiration: Date,
   friends: [
     {
-      userId: Schema.Types.ObjectId,
+      userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      },
     },
   ],
   icon: String,
+  blockId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Block',
+  },
 });
 
 module.exports = mongoose.model('User', userSchema);
