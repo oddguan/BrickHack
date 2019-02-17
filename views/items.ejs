@@ -3,26 +3,58 @@
 
 <body>
    <%- include('./includes/navigation.ejs') %>
+   <style>
+       #map{
+           height: 400px;
+           width: 100%;
+       }
+   </style>
+   
     <div class="container">
         <main>
-            <div class="container row d-flex justify-content-around">
-                <% for (i of lendingItems) { %>
-                    <div class="card m-3 text-center" style="flex-basis: 18rem;">
-                        <div>
-                            <img class="card-img-top p-2" src="<%= i.imageURL %>" alt="<%= i.name %>">
+            <div class="container row">
+                <div class="col d-flex justify-content-around">
+                    <% for (i of lendingItems) { %>
+                        <div class="card m-3 text-center" style="flex-basis: 18rem;">
+                            <div>
+                                <img class="card-img-top p-2" src="<%= i.imageUrl %>" alt="<%= i.name %>">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title"><%= i.name %></h3>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h1 class="card-title"><%= i.name %></h1>
-                            <!-- <div class="card-text">
-                                <h2>$<%=  %></h2>
-                                <p><%=  %></p>
-                            </div> -->
-                            <!-- <a href="/products/<%=  %>" class="btn btn-outline-primary mb-3">Details</a>
-                            <% if (isAuthenticated) { %>
-                            <% } %>     -->
-                        </div>
-                    </div>
-                <% } %>
+                    <% } %>
+                </div>
+                <div class="col" id="map"></div>
+                <script>
+                    function initMap () {
+                        const options = {
+                            zoom: 12,
+                            center: <%= center %>,
+                        }
+                        
+                        const map = new google.maps.Map(document.getElementById('map'), options);
+                    }
+
+                    function addMarker (coords) {
+                        const marker = new google.maps.Marker({
+                            position: coords,
+                            map: map,
+                            icon: '',
+                        });
+                    }
+                    var myLatLng = {lab: -25.363, lng: 131.044};
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title: 'Hello World!'
+                    });
+                    
+                    <% for (i of lendingItems) { %>
+                        addMarker(<%- JSON.stringify(i.coords) %>);
+                    <% } %>
+                </script>
+                <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCh2YW5DbAh6hJAMCHqk9h9dTWpmGQYKPk&callback=initMap"></script>
             </div>
         </main>
     </div>
