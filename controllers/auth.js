@@ -183,6 +183,13 @@ exports.postSignup = (req, res, next) => {
         name,
         email,
         password: hashedPassword,
+        address: {
+          street1: "",
+          street2: "",
+          city: "",
+          state: "",
+          zip: "",
+        },
       });
       console.log(user);
       return user.save();
