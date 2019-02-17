@@ -116,10 +116,10 @@ exports.postUpdateProfile = (req, res, next) => {
             let b;
             if (!find) {
               Block.findOne({ _id: req.user.blockId }).then((block) => {
-                console.log('findOne not find');
+                //console.log('findOne not find');
                 // console.log(block);
-                console.log(req.user._id.toString());
-                console.log(block.users[0]._id.toString());
+                //console.log(req.user._id.toString());
+                //console.log(block.users[0]._id.toString());
                 const newUser = block.users.filter(
                   ou => ou._id.toString() !== req.user._id.toString(),
                 );
