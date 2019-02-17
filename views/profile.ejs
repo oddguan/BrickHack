@@ -6,7 +6,7 @@
         <input id="anPageName" name="page" type="hidden" value="profile"/>
         <div class="profile">
             <div>
-                <img src="<%= user.icon ? user.icon : './img/default-avatar.jpg' %>" class="rounded mx-auto d-block"/>
+                <img src="<%= user.icon ? user.icon : './img/default-avatar.jpg' %>" style="width:15rem; height: auto;" class="rounded mx-auto d-block"/>
             </div>
             <div class="container text-center border border-rounded mt-2 mb-2 p-2">
                 <h3>
@@ -42,7 +42,8 @@
                                                 </h4>
                                                 <div class="card-text">
                                                 </div>
-                                                <a href="#" href="" class="btn btn-info">Edit</a>
+                                                <a href="/edit-item/<%=lend._id.toString()%>" class="btn btn-info">Edit</a>
+                                                <a href="#" class="btn btn-danger">Delete</a>
                                             </div>
                                         </div>
                                     </div>
@@ -56,16 +57,11 @@
                             </div>
                         <% } %>
                     </div>
-                    <div class="col container border border-rounded border-secondary">
-                        <div class="row p-2">
+                    <div class="col container border border-rounded">
+                        <div class="container">
                             <h4 class="text-center">
-                                Posts
+                                You don't have any borrowing items.
                             </h4>
-                            <div class="container text-center">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus esse enim ipsum optio praesentium ullam nulla modi voluptates tenetur vero ad, magnam consectetur recusandae eveniet doloremque, minima veniam aut numquam.
-                                </p>
-                            </div>
                         </div>
                         <div class="row">
 

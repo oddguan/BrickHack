@@ -15,4 +15,8 @@ router.get('/add-item', profileController.getAddItem);
 
 router.post('/add-item', profileController.postAddItem);
 
+router.get('/edit-item/:itemId', profileController.getEditItem);
+
+router.post('/edit-item/', profileController.postEditItem);
+
 module.exports = router;

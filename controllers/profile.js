@@ -211,3 +211,34 @@ exports.getEditProfile = (req, res, next) => {
 };
 
 exports.postEditProfile = (req, res, next) => {};
+
+exports.getEditItem = (req, res, next) => {
+  const { itemId } = req.params;
+  Product.findById(itemId)
+    .then((item) => {
+      console.log(item);
+      res.render('edit-item', {
+        pageTitle: 'Edit Item',
+        path: '/edit-item',
+        item,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+exports.postEditItem = (req, res, next) => {
+  console.log('post edit item');
+  const { itemId, name, imageUrl } = req.body;
+  Product.findById(itemId)
+    .then((item) => {
+      console.log(item);
+      item.name = name;
+      item.imageUrl = imageUrl;
+      return item.save();
+    })
+    .then((result) => {
+      res.redirect('/profile');
+    });
+};
