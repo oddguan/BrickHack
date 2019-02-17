@@ -26,12 +26,13 @@ exports.getProfile = (req, res, next) => {
 
 exports.getUpdateProfile = (req, res, next) => {
   console.log('get update Profile');
-  User.find({ _id: req.user._id })
+  User.findOne({ _id: req.user._id })
     .then((user) => {
       console.log(user);
       res.render('update-profile', {
         path: '/update-profile',
         pageTitle: 'Update Profile',
+        user,
       });
     })
     .catch((err) => {
@@ -94,40 +95,35 @@ exports.postUpdateProfile = (req, res, next) => {
                 find = true;
                 let hasUser = false;
                 b.users.forEach((u) => {
-                  if (u._id.toString() === req.user._id.toString()) {
+                  if (u === req.user._id.toString()) {
                     hasUser = true;
                   }
                 });
                 if (!hasUser) {
                   Block.findOne({ _id: req.user.blockId }).then((block) => {
-                    block.users.filter(ou => ou._id.toString() !== req.user._id.toString());
+                    block.users.filter(ou => ou !== req.user._id.toString());
                     block.save();
                   });
-                  b.users.push(req.user);
+                  b.users.push(req.user._id.toString());
                   // req.user.blockId = b._id;
                   // user.update({ blockId: b._id });
                   req.user.blockId = b._id;
                   // console.log(typeof req.user);
                   // console.log(b);
                 }
+                req.user.name = req.body.name;
+                req.user.icon = req.body.icon;
                 req.user.save();
                 b.save();
+                res.redirect('/profile');
               }
             });
             let b;
             if (!find) {
-              Block.findOne({ _id: req.user.blockId }).then((block) => {
-                // console.log('findOne not find');
-                // console.log(block);
-                // console.log(req.user._id.toString());
-                // console.log(block.users[0]._id.toString());
-                const newUser = block.users.filter(
-                  ou => ou._id.toString() !== req.user._id.toString(),
-                );
-                block.users = newUser;
-                block.save();
-              });
-              console.log('not find');
+              const usersArray = [];
+              usersArray.push(req.user._id);
+              console.log(usersArray);
+              console.log(typeof usersArray);
               b = new Block({
                 name: null,
                 center: {
@@ -135,13 +131,16 @@ exports.postUpdateProfile = (req, res, next) => {
                   lng: req.user.address.lng,
                 },
                 radius: 1000,
-                users: [req.user],
               });
+              b.users = usersArray;
               // b.users.push(req.user);
-              req.user.blockId = b._id;
+              req.user.blockId = b._id.toString();
               // console.log('req.user.block:', req.user);
+              req.user.name = req.body.name;
+              req.user.icon = req.body.icon;
               req.user.save();
               b.save();
+              res.redirect('/profile');
             }
 
             // console.log(b);
@@ -202,8 +201,13 @@ exports.postAddItem = (req, res, next) => {
 };
 
 exports.getEditProfile = (req, res, next) => {
+  console.log('get edit profile');
+  console.log(req.user);
   res.render('edit-profile', {
     path: '/edit-profile',
     pageTitle: 'Edit Profile',
+    user: req.user,
   });
 };
+
+exports.postEditProfile = (req, res, next) => {};

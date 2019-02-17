@@ -14,19 +14,20 @@
                 </h3>
                 <% if (user.address) { %>
                     <h4>
-                        <%= `${user.address.street1}, ${user.address.street2}. ${user.address.city} ${user.address.state}` %>
+                        <%= `${user.address.street1} ${user.address.street2} ${user.address.city} ${user.address.state}` %>
                     </h4>
                 <% } else { %>
                     <h4>
                         You don't have an address. Add it now!
                     </h4>
                 <% } %>
-                <a class="btn btn-info" href="/edit-profile">Edit Profile</a>  
+                <a class="btn btn-info" href="/update-profile">Edit Profile</a>
             </div>
             <div class="container border border-rounded mb-5">
                 <div class="row">
-                    <div class="col">
-                        <h4 class="text-center p-2">Lending Items</h4>
+                    <div class="col text-center">
+                        <h4 class="p-2">Lending Items</h4>
+                        <a class="btn btn-info mb-2" href="/add-item">Add Item</a>
                         <% if (lends.length >= 0) {%>
                             <% for (lend of lends) { %>
                                 <div class="card">
@@ -41,7 +42,7 @@
                                                 </h4>
                                                 <div class="card-text">
                                                 </div>
-                                                <a href="#" class="btn btn-info">Edit</a>
+                                                <a href="#" href="" class="btn btn-info">Edit</a>
                                             </div>
                                         </div>
                                     </div>

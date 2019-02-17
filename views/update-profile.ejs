@@ -5,13 +5,36 @@
    <%- include('./includes/navigation.ejs') %>
    <div class="container">
         <form action="/update-profile" method="POST">
-            <input type="text" name="street1">
-            <input type="text" name="street2">
-            <input type="text" name="city">
-            <input type="text" name="state">
-            <input type="text" name="zip">
+            <div class="form-group">
+                <label for="street1">Name</label>
+                <input class="form-control" type="text" name="name" id="name" value="<%= user.name %>">
+            </div>
+            <div class="form-group">
+                <label for="street1">Street Address 1</label>
+                <input class="form-control" type="text" name="street1" id="street1" value="<%= user.address.street1 %>" required>
+            </div>
+            <div class="form-group">
+                <label for="street2">Street Address 2</label>
+                <input class="form-control" type="text" name="street2" id="street2" value="<%=user.address.street2%>" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input class="form-control" type="text" name="city" id="city" value="<%=user.address.city%>" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input class="form-control" type="text" name="state" id="state" value="<%=user.address.state%>" required>
+            </div>
+            <div class="form-group">
+                <label for="zip">ZIP</label>
+                <input class="form-control" type="text" name="zip" id="zip" value="<%=user.address.zip%>" required>
+            </div>
+            <div class="form-group">
+                <label for="icon">Avatar</label>
+                <input class="form-control" type="text" name="icon" id="icon" value="<%=user.icon%>" required>
+            </div>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <button type="submit">submit</button>
+            <button type="submit" class="btn btn-info">Update Profile</button>
         </form>
    </div>
 

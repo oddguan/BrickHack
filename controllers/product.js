@@ -17,7 +17,7 @@ exports.getProduct = async (req, res, next) => {
       model: 'User',
     })
     .exec((err, block) => {
-      // console.log(block);
+      console.log(block);
       async.forEachOf(block.users, (value, key, callback) => {
         const newConcat = value._doc.items.lend;
         // console.log(value._doc);
