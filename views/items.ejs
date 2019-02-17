@@ -13,9 +13,9 @@
     <div class="container">
         <main>
             <div class="container row">
-                <div class="col d-flex justify-content-around">
+                <div class="col d-flex flex-wrap justify-content-around">
                     <% for (i of lendingItems) { %>
-                        <div class="card m-3 text-center" style="flex-basis: 18rem;">
+                        <div class="card m-1 text-center" style="flex-basis: 10rem;">
                             <div>
                                 <img class="card-img-top p-2" src="<%= i.imageUrl %>" alt="<%= i.name %>">
                             </div>
@@ -34,25 +34,21 @@
                         }
                         
                         const map = new google.maps.Map(document.getElementById('map'), options);
-                    }
-
-                    function addMarker (coords) {
+                        function addMarker (coords) {
                         const marker = new google.maps.Marker({
                             position: coords,
                             map: map,
                             icon: '',
                         });
                     }
-                    var myLatLng = {lab: -25.363, lng: 131.044};
-                    var marker = new google.maps.Marker({
-                        position: myLatLng,
-                        map: map,
-                        title: 'Hello World!'
-                    });
-                    
                     <% for (i of lendingItems) { %>
                         addMarker(<%- JSON.stringify(i.coords) %>);
                     <% } %>
+                    }
+
+                    
+
+                        // addMarker({lat: 43.1282925, lng: -77.6317187});
                 </script>
                 <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCh2YW5DbAh6hJAMCHqk9h9dTWpmGQYKPk&callback=initMap"></script>
             </div>

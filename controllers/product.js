@@ -36,3 +36,11 @@ exports.getProduct = async (req, res, next) => {
       });
     });
 };
+
+exports.getIndex = (req, res, next) => {
+  if (!req.session.isLoggedIn) {
+    res.redirect('/login');
+  } else {
+    res.redirect('/items');
+  }
+};

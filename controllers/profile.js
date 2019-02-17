@@ -7,20 +7,21 @@ const Product = require('../models/product');
 const GEOCODE_API_KEY = 'AIzaSyDcxpWg6vSSKguDxWsJ_GIVT7QuRPYwUdw';
 
 exports.getProfile = (req, res, next) => {
-  console.log('get profile route');
-  console.log(req.user._id);
-  User.find({ _id: req.user._id })
-    .then((user) => {
-      console.log(user);
+  // console.log('get profile route');
+  // console.log(req.user._id);
+  User.findOne({ _id: req.user._id }).then((user) => {
+    // console.log(user);
+    // console.log(user.items.lend);
+    Product.find({ userId: req.user._id }).then((lends) => {
+      console.log(lends);
       res.render('profile', {
         path: '/profile',
         pageTitle: 'Profile',
-        user: user[0],
+        user,
+        lends,
       });
-    })
-    .catch((err) => {
-      console.log(err);
     });
+  });
 };
 
 exports.getUpdateProfile = (req, res, next) => {
@@ -116,10 +117,10 @@ exports.postUpdateProfile = (req, res, next) => {
             let b;
             if (!find) {
               Block.findOne({ _id: req.user.blockId }).then((block) => {
-                //console.log('findOne not find');
+                // console.log('findOne not find');
                 // console.log(block);
-                //console.log(req.user._id.toString());
-                //console.log(block.users[0]._id.toString());
+                // console.log(req.user._id.toString());
+                // console.log(block.users[0]._id.toString());
                 const newUser = block.users.filter(
                   ou => ou._id.toString() !== req.user._id.toString(),
                 );
@@ -198,4 +199,11 @@ exports.postAddItem = (req, res, next) => {
     .catch((err) => {
       console.log(err);
     });
+};
+
+exports.getEditProfile = (req, res, next) => {
+  res.render('edit-profile', {
+    path: '/edit-profile',
+    pageTitle: 'Edit Profile',
+  });
 };
